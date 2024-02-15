@@ -1,0 +1,17 @@
+{
+    "sqltools.useNodeRuntime": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:myFirstAPI}/bin/pb/pocketbase/pb_data/data.db",
+            "name": "AliAlexJulez"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Connect1",
+            "database": "${workspaceFolder:myFirstAPI}/bin/pb/pocketbase/pb_data/data.db"
+        }
+    ]
+}
