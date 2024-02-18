@@ -11,7 +11,7 @@ require("dotenv").config();
 const middlewares = require("./middlewares");
 
 const db = new sqlite3.Database(
-  resolve(__dirname, "../bin/pb/pb_data/data.db")
+  resolve(__dirname, "../bin/pb/pocketbase/pb_data/data.db")
 );
 
 const app = express();
@@ -111,3 +111,24 @@ app.delete("/books", (req, res) => {
   });
 });
 
+app.get("/users", (req, res) => {
+
+  // We need to run a sql query against our pocketbase DB to get all the products
+  db.all("SELECT * FROM users2", (err, rows) => {
+    if (err) {
+      console.log("Error running sql: " + err);
+
+      res.status(500);
+      res.json({
+        message: "Internal Server Error",
+      });
+    }
+
+    res.json({
+      message: "all users",
+      data: rows,
+    });
+  });
+});
+
+module.exports = app;

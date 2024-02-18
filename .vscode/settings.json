@@ -4,14 +4,14 @@
         {
             "previewLimit": 50,
             "driver": "SQLite",
-            "database": "${workspaceFolder:myFirstAPI}/bin/pb/pocketbase/pb_data/data.db",
-            "name": "AliAlexJulez"
+            "name": "Connect1",
+            "database": "${workspaceFolder:myFirstAPI}/bin/pb/pocketbase/pb_data/data.db"
         },
         {
             "previewLimit": 50,
             "driver": "SQLite",
-            "name": "Connect1",
-            "database": "${workspaceFolder:myFirstAPI}/bin/pb/pocketbase/pb_data/data.db"
+            "database": "${workspaceFolder:groupAPI}/bin/pb/pocketbase/pb_data/data.db",
+            "name": "AliAlexJulez"
         }
     ]
 }
