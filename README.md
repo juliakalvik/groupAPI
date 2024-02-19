@@ -1,53 +1,78 @@
-# Express API Starter
+# alialexjules group API project
 
-How to use this template:
+Link to hosted site: https://alialexjules.onrender.com
 
-```sh
-npx create-express-api --directory my-api-name
-```
+Link to books data: https://alialexjules.onrender.com/books
 
-Includes API Server utilities:
+Link to users data: https://alialexjules.onrender.com/users
 
-* [morgan](https://www.npmjs.com/package/morgan)
-  * HTTP request logger middleware for node.js
-* [helmet](https://www.npmjs.com/package/helmet)
-  * Helmet helps you secure your Express apps by setting various HTTP headers. It's not a silver bullet, but it can help!
-* [dotenv](https://www.npmjs.com/package/dotenv)
-  * Dotenv is a zero-dependency module that loads environment variables from a `.env` file into `process.env`
-* [cors](https://www.npmjs.com/package/cors)
-  * CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
 
-Development utilities:
+## Description
 
-* [nodemon](https://www.npmjs.com/package/nodemon)
-  * nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
-* [eslint](https://www.npmjs.com/package/eslint)
-  * ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
-* [jest](https://www.npmjs.com/package/jest)
-  * Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
-* [supertest](https://www.npmjs.com/package/supertest)
-  * HTTP assertions made easy via superagent.
+This school project is for practicing building a backend system from scratch, managing different API endpoints. This project includes endpoints for users and books, and functionalities such as retrieving all books and a single book by id, adding new books, registering users, and deleting users. 
 
-## Setup
+## Features
 
-```
-npm install
-```
+- **Book Management:**
+  - Retrieve all books
+- Retrieve a single book by id
+  - Add a new book
+  - Delete a book
+- **User Management:**
+  - Register a new user
+  - Delete a user
 
-## Lint
+## Tech specs
+Pocketbase: Data storage solution (database, we do not recommend pb).
 
-```
-npm run lint
-```
+Render: Hosting platform and environment.
 
-## Test
+SQLite: Embedded, serverless SQL database engine.
 
-```
-npm test
-```
+Express: Web application framework for Node.js, used for creating server-side applications and APIs.
 
-## Development
 
-```
-npm run dev
-```
+## Usage
+
+### Books Endpoint
+
+- **GET /books:** Retrieve all books.
+- **POST /books:** Add a new book.
+- **DELETE /books/:id:** Delete a book by its ID.
+
+Link to data for all books: https://alialexjules.onrender.com/books
+
+Link to data for a specific book by id: https://alialexjules.onrender.com/books/?id=r15a101959a4579
+
+### Users Endpoint
+
+GET /users: Retrieve all users.
+
+POST /users: Register a new user.
+
+DELETE /users/:id: Delete a user by its ID.
+
+Link to data for all users: https://alialexjules.onrender.com/users
+
+Link to data for specific user by id: https://alialexjules.onrender.com/users/?id=r7108163bdc14fa
+
+
+## Installation
+
+To install and run this project locally, follow these steps:
+
+1. Clone this repository to your local machine.
+2. Install dependencies using `npm install`.
+3. Set up the database. (Add specific instructions if necessary)
+4. Create a `.env` file based on the provided `.env.example` file and configure the environment variables.
+5. Start the server using `npm start`.
+
+## Team members:
+- Ali Nough 
+- Alexander Bjerketvedt 
+- Julia Kalvik
+
+
+
+
+
