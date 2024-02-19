@@ -85,19 +85,27 @@ it('Deletes a book', () => {
         .should('equal', 200);
     });
 
-    // Test POST request to add a new user (Might fail if the user already exists)
-    it('Registers a new user', () => {
-      cy.request('POST', 'http://localhost:8090/api/collections/users2/records', {
-       username: 'newuseragainnn',
-       password: 'password123',
-       passwordConfirm: 'password123', 
-       email: 'newuseragainnn@example.com'
-  
-     })
-  .its('status')
-  .should('equal', 200);
-    });
+// Test DELETE request to delete a user
+it('Creates a new user and deletes it', () => {
+  // First, add a new user to delete it later
+  cy.request('POST', 'http://localhost:8090/api/collections/users2/records', {
+    username: 'alitest2',
+    password: 'password123',
+    passwordConfirm: 'password123', 
+    email: 'alitest2@example.com'
+  }).then((response) => {
 
-
+    // Now delete the user using the same id that you got back
+      const newUserId = response.body.id; 
+      console.log("user id", newUserId)
+      cy.request('DELETE', `http://localhost:8090/api/collections/users2/records/${newUserId}`)
+        .its('status')
+        .should('equal', 204);
   });
-  
+});
+
+
+});
+
+
+

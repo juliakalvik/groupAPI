@@ -51,7 +51,7 @@ app.get("/books", (req, res) => {
     return;
   }
 
-  // We need to run a sql query against our pocketbase DB to get all the products
+
   db.all("SELECT * FROM books", (err, rows) => {
     if (err) {
       console.log("Error running sql: " + err);
